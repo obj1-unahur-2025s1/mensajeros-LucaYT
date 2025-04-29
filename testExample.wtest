@@ -1,9 +1,37 @@
-import example.pepita
+import example.*
 
 describe "group of tests for pepita" {
 
-  test "pepita has initial energy" {
-    assert.equals(100, pepita.energy())
+  test "no funca profe" {
+    paquete.pagarPaquete()
+    roberto.cambiaDeTransporte(camion)
+    camion.cantAcoplados(1)
+    assert.that(paquete.puedeEntregarse(roberto))
   }
 
+  test "neo contratado 8)"{
+    empresaMensajes.contratar(neo)
+    assert.that(empresaMensajes.mensajeros().contains(neo))
+  }
+  method initialize(){
+    empresaMensajes.contratar(neo)
+  }
+  test "neo despedido 8("{
+    empresaMensajes.despedir(neo)
+    assert.notThat(empresaMensajes.mensajeros().contains(neo))
+  }
+  test "neo solo 8("{
+    assert.notThat(empresaMensajes.esGrande())
+  }
+
+  test "chuck nuevo prota junto al que te dejo el, y el de matrix"{
+    empresaMensajes.contratar(chuckNorris)
+    empresaMensajes.contratar(roberto)
+    assert.that(empresaMensajes.esGrande())
+  }
+
+  test "neo entrega 8)" {
+    paquete.pagarPaquete()
+    assert.that(empresaMensajes.puedeEntregarsePaquete())
+  }
 }
